@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=72"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "program_zaliczeniowy"
+version = "0.1"
+description = "Projekt zaliczeniowy na NYPD"
+authors = [
+    { name = "Michalina Szpak", email = "mj.szpak@student.uw.edu.pl"}
+]
+
+requires-python = ">=3.9"
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "requests"
+]
+
+
+[project.license]
+text = "BSD 3-Clause"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.scripts]
+program_zaliczeniowy = "program_zaliczeniowy.main:main"
